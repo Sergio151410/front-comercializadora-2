@@ -1,0 +1,24 @@
+.color {
+    background-color: #EBC097;
+}
+
+.tamI {
+    width: 35px;
+    height: 35px;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 150px;
+}
+
+.example-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+}

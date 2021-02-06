@@ -1,0 +1,36 @@
+.tamImg{
+    width: 25px;
+    height: 25px;   
+}
+
+.colorB{
+    background-color:white;
+}
+
+.tamCol{
+    width: 80px;
+}
+
+.fruta{
+    width:60%; 
+    height: 65px;
+    text-align: center;
+}
+
+.tamI{
+    width: 80px;
+    height: 80px;
+}
+.tamId{
+    width: 18px;
+    height: 18px;
+}
+
+.example-card {
+    max-width: 160px;
+  }
+  
+  .example-header-image {
+    height: 100px;
+    background-size: cover;
+  }

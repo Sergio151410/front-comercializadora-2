@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+.search {
+    width: 30%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.menuLeft {
+    width: 150px;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.menuHover {
+    background-color: chartreuse;
+}

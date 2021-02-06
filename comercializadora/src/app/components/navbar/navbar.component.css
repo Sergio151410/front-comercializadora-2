@@ -1,0 +1,18 @@
+.formHeader {
+    /* La magia de FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Alto de la barra, en tu caso sería 50px */
+    height: 100px;
+    
+    /* Color para el demo */
+    background-color:#DAE1BC;
+  }
+  
+.textA{
+  text-align: center;
+  font-size: 15px;
+}
+  

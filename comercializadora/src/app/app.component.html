@@ -1,0 +1,13 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose class="menuLeft">
+
+        <app-menu></app-menu>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-navbar></app-navbar>
+        <p><button class="menuHover" mat-button (mouseover)="sidenav.open()">Menu</button></p>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

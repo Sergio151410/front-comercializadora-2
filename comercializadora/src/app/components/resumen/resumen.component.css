@@ -1,0 +1,15 @@
+    table {
+        width: 100%;
+    }
+    
+    .margin-row {
+        margin: 24px 200px auto 0 !important;
+    }
+    
+    .margin-space {
+        margin: 5px;
+    }
+    
+    .margin-cero {
+        margin: 0;
+    }

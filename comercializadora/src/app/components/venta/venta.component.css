@@ -1,0 +1,45 @@
+.tamImg {
+    width: 25px;
+    height: 25px;
+}
+
+.colorB {
+    background-color: white;
+}
+
+.tamCol {
+    width: 100px;
+}
+
+.tamI {
+    width: 16px;
+    height: 16px;
+}
+
+.tamId {
+    width: 18px;
+    height: 18px;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 300px;
+    overflow: auto;
+}
+
+head {
+    position: fixed;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.frutaImg {
+    width: 100px;
+    height: 100px;
+}
+
+.centerTex {
+    text-align: center;
+}

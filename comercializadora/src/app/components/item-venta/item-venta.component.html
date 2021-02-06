@@ -1,0 +1,99 @@
+<div>
+</div>
+<div class="col-lg-4">
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-hover scrollTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let fruta of frutas" (click)="verFruta($event, fruta)">
+                    <td class="cursor-mano"><img class="card-img-top" src="{{fruta.imagen}}" style="width:40px; "></td>
+                    <td class="cursor-mano">{{fruta.nombre}}</td>
+                    <td class="cursor-mano">{{fruta.precio}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-lg-8">
+
+
+
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label fVenta="nombre">Empleado*:</label>
+            <select class="form-control" id="listaEmpleados" [(ngModel)]="empleado" (ngModelChange)="selectEmpleado()">
+                <option selected disabled [ngValue]="0">Seleccionar Empleado</option>
+                    <option *ngFor=" let empleado of empleados " [ngValue]="empleado">{{empleado.nombre}}</option>
+                </select>
+        </div>
+        <div class="col-lg-6 ">
+            <label for="nombre ">Cliente*:</label>
+            <select class="form-control " id="listaClientes " [(ngModel)]="cliente" (ngModelChange)="selectCliente()">
+                <option selected disabled [ngValue]="0">Seleccionar Cliente</option>
+                <option *ngFor=" let cliente of clientes " [ngValue]="cliente">{{cliente.nombre}}</option>
+                </select>
+        </div>
+
+    </div>
+
+    <br>
+    <div *ngIf="venta.length===0 " class="alert alert-warning centerTex " role="alert ">
+        No se han agregado productos
+    </div>
+    <table *ngIf="venta.length> 0" class="table table-hover table-striped table-bordered colorB ">
+        <thead>
+            <tr>
+                <th class="tamCol">Descripción</th>
+                <th>Cantidad (KG)</th>
+                <th class="tamCol">Costo</th>
+                <th class="tamCol">Total</th>
+                <th class="tamCol"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of venta; let i = index">
+                <td matTooltip="Modificar" (click)="modificarProducto(v, i);" class="cursor-mano" id="nombreP">{{v.fruta.nombre}}</td>
+                <td matTooltip="Modificar" (click)="modificarProducto(v, i);" class="cursor-mano" id="cantidadP">{{v.cantidad}}</td>
+                <td matTooltip="Modificar" (click)="modificarProducto(v, i);" class="cursor-mano" id="costoP">{{v.costo | currency}}</td>
+                <td matTooltip="Modificar" (click)="modificarProducto(v, i);" class="cursor-mano" id="total">{{v.total | currency}}</td>
+                <td id="">
+                    <button matTooltip="Eliminar producto" mat-icon-button aria-label="Eliminar" color="warn" (click)="eliminarProducto(v);">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td colspan="3" id="totalVenta" style="text-align: right;">Gran Total:</td>
+                <td>{{gTotal | currency}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row" *ngIf="venta.length > 0">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3">
+                <button type="button" class="btn btn-success" (click)="resumenVenta();" style="text-align:center">
+                    <img src="../../assets/img/aceptar.png" class="tamId">                            
+                    Terminar
+                </button>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3" style="margin: 0 0 0 40px;">
+                <button type="button" style="text-align: end;" class="btn btn-warning" (click)="vaciarCanasta();">
+                Limpiar Canasta
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
