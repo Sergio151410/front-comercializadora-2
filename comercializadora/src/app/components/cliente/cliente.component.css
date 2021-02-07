@@ -1,0 +1,42 @@
+.tamImg {
+    width: 40px;
+    height: 40px;
+}
+
+.colorB {
+    background-color: white;
+}
+
+.tamCol {
+    width: 100%;
+}
+
+.tamI {
+    width: 16px;
+    height: 16px;
+}
+
+.tamId {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Structure */
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

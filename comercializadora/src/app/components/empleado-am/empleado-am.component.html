@@ -1,0 +1,86 @@
+<app-menu></app-menu>
+<div class="container">
+<h3> 
+    <img src="../../assets/img/empleado.png" alt="logoCliente" class="tamImg">
+    Empleado
+</h3>
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput disabled value="Datos del empleado">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0">
+    <tr>
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput>
+            </mat-form-field>
+        </td>
+
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Apellido Paterno</mat-label>
+            <input matInput>
+            </mat-form-field>
+        </td>
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Apellido Materno</mat-label>
+            <input matInput>
+            </mat-form-field>
+        </td>
+    </tr>
+
+    
+    <tr>
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Calle</mat-label>
+            <input matInput>
+            </mat-form-field>
+        </td>
+
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Colonia</mat-label>
+            <input matInput>
+            </mat-form-field>
+        </td>
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Numero</mat-label>
+            <input matInput #postalCode maxlength="5" placeholder="">
+            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            </mat-form-field>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Télefono</mat-label>
+            <span matPrefix>+54 &nbsp;</span>
+            <input type="tel" matInput placeholder="">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+        </td>
+    </tr>
+</table>
+  
+<div style="text-align-last: center;">
+        <button type="button" class="btn btn-success">
+            <img src="../../assets/img/aceptar.png" class="tamId">
+            Aceptar
+        </button>
+        &nbsp;
+        <a routerLink='/empleado' class="btn btn-danger">
+            <img src="../../assets/img/cancelar.png" class="tamId">
+            Cancelar
+        </a>
+    </div>
+  </form>
+  
+</div>

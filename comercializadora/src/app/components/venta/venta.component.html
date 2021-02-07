@@ -1,0 +1,23 @@
+<div class="container">
+    <h3>
+        <img src="../../assets/img/punto-de-venta.png" alt="logoCliente" class="tamImg"> Venta
+    </h3>
+    <br>
+    <mat-tab-group (selectedTabChange)="handleVenta($event);">
+        <mat-tab label="Venta 1">
+            <app-item-venta [flagVenta]="flagVenta" *ngIf="v1"></app-item-venta>
+        </mat-tab>
+        <mat-tab label=" Venta 2 ">
+            <app-item-venta [flagVenta]="flagVenta" *ngIf="v2"></app-item-venta>
+        </mat-tab>
+        <mat-tab label="Venta 3 ">
+            <app-item-venta [flagVenta]="flagVenta" *ngIf="v3"></app-item-venta>
+        </mat-tab>
+        <mat-tab label="Venta 4 ">
+            <app-item-venta [flagVenta]="flagVenta" *ngIf="v4"></app-item-venta>
+        </mat-tab>
+        <mat-tab label="Venta 5 ">
+            <app-item-venta [flagVenta]="flagVenta" *ngIf="v5"></app-item-venta>
+        </mat-tab>
+    </mat-tab-group>
+</div>

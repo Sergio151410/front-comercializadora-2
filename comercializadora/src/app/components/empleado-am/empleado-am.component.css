@@ -1,0 +1,36 @@
+.tamImg{
+    width: 40px;
+    height: 40px;   
+}
+
+.colorB{
+    background-color:white;
+}
+
+.tamCol{
+    width: 80px;
+}
+
+.tamI{
+    width: 16px;
+    height: 16px;
+}
+.tamId{
+    width: 18px;
+    height: 18px;
+}
+
+
+.example-form {
+    min-width: 100px;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
