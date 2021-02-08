@@ -5,6 +5,7 @@ import { ClienteAMComponent } from './components/cliente-am/cliente-am.component
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { EmpleadoAMComponent } from './components/empleado-am/empleado-am.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
+import { ListaAdeudosComponent } from './components/lista-adeudos/lista-adeudos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ProductoAMComponent } from './components/producto-am/producto-am.component';
 import { ProductoComponent } from './components/producto/producto.component';
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   {
     path:  'adeudo', component: AdeudoComponent
+  },
+  {
+    path: 'listaAdeudos/:clientId', component: ListaAdeudosComponent
   },
   {
     path:  'principal', component: PrincipalComponent, pathMatch:'full'

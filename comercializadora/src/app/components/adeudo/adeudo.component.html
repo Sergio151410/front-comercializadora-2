@@ -1,62 +1,53 @@
 <div class="container">
     <h3>
-        <img src="../../assets/img/deuda.png" alt="logoAdeudo" class="tamImg"> ADEUDOS
+      <img src="../../assets/img/deuda.png" alt="logoAdeudo" class="tamImg" />
+      ADEUDOS
     </h3>
-
-
+  
     <div class="col-lg-6">
-        <input type="text" class="form-control" placeholder="Buscar" id="buscador">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar"
+        id="buscador"
+      />
     </div>
     <div class="col-lg-2">
-        <button class="btn btn-primary"> 
-            <img src="../../assets/img/busqueda.png" class="tamI"> 
-            Buscar
-        </button>
+      <button class="btn btn-primary">
+        <img src="../../assets/img/busqueda.png" class="tamI" />
+        Buscar
+      </button>
     </div>
-    <br><br><br>
-
-    <div class="col-lg-12">
-        <table class="table table-hover table-striped table-bordered colorB">
-            <thead>
-                <tr>
-                    <th class="tamColD"></th>
-                    <th>Folio</th>
-                    <th>Cliente</th>
-                    <th>Adeudo</th>
-                    <th class="tamCol"></th>
-                    <th class="tamCol"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <button type="button" class="btn btn-info">
-                        <img src="../../assets/img/informacion.png" class="tamI">
-                        Ver
-                    </button>
-                    </td>
-                    <td id="folioC">0001</td>
-                    <td id="nombreC">Maricruz Gonzalez Ledesma</td>
-                    <td id="adeudo">$10.00</td>
-                    <td>
-                        <button type="button" class="btn btn-warning">
-                        <img src="../../assets/img/disminucion.png" class="tamI">
-                        Abonar
-                    </button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-success">
-                        <img src="../../assets/img/pago.png" class="tamI">
-                        Saldar
-                    </button>
-                    </td>
-
-                </tr>
-
-
-            </tbody>
-        </table>
+    <br /><br /><br />
+  
+    <div class="col-lg-12" style="overflow-x: auto">
+      <table class="table table-hover table-striped table-bordered colorB">
+        <thead>
+          <tr>
+            <th>Folio</th>
+            <th>Cliente</th>
+            <th>Adeudo</th>
+            <th class="tamCol"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let adeudo of adeudosClientes">
+            <td id="folioC">{{ adeudo.id }}</td>
+            <td id="nombreC">{{ adeudo.nombre }}</td>
+            <td id="adeudo">${{ adeudo.cantidad }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-warning"
+                (click)="goToListaAdeudos(adeudo.id)"
+              >
+                <img src="../../assets/img/informacion.png" class="tamI" />
+                Ver
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-
-</div>
+  </div>
+  

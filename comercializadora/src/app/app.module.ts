@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
@@ -16,11 +17,10 @@ import { ClienteAMComponent } from './components/cliente-am/cliente-am.component
 import { EmpleadoAMComponent } from './components/empleado-am/empleado-am.component';
 import { ProductoAMComponent } from './components/producto-am/producto-am.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from './modules/material/material.module';
+import { MaterialModule } from './modules/material/material.module';
 import { ItemVentaComponent } from './components/item-venta/item-venta.component';
 import { ResumenComponent } from './components/resumen/resumen.component';
-
-
+import { ListaAdeudosComponent } from './components/lista-adeudos/lista-adeudos.component';
 
 @NgModule({
   declarations: [
@@ -38,19 +38,19 @@ import { ResumenComponent } from './components/resumen/resumen.component';
     ProductoAMComponent,
     ItemVentaComponent,
     ResumenComponent,
-    ProductoAMComponent
+    ProductoAMComponent,
+    ListaAdeudosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [
-    ResumenComponent
-  ],
+  entryComponents: [ResumenComponent],
 })
-export class AppModule { }
+export class AppModule {}

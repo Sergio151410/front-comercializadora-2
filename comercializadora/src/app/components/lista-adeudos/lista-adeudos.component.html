@@ -1,0 +1,80 @@
+<div class="container">
+	<h3>
+		<img src="../../assets/img/deuda.png" alt="logoAdeudo" class="tamImg" />
+    ADEUDOS
+  </h3>
+
+		<div class="col-lg-6">
+
+		</div>
+		<mat-form-field>
+			<input matInput placeholder="Buscar venta" #input>
+    </mat-form-field>
+			<div class="spinner-container" *ngIf="dataSource.loading$ | async">
+				<mat-spinner></mat-spinner>
+			</div>
+			<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="folio"
+				matSortDirection="asc" matSortDisableClear>
+
+				<ng-container matColumnDef="folio">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>Folio</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">{{adeudo.folio}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="fecha">
+					<mat-header-cell *matHeaderCellDef>Fecha</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">{{adeudo.fecha}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="productos">
+					<mat-header-cell *matHeaderCellDef>Productos</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">{{adeudo.productos}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="total">
+					<mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">${{adeudo.total}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="abonado">
+					<mat-header-cell *matHeaderCellDef>Abonado</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">${{adeudo.abonado}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="pendiente">
+					<mat-header-cell *matHeaderCellDef>Pendiente</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">${{adeudo.pendiente}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="opciones">
+					<mat-header-cell *matHeaderCellDef>Opciones</mat-header-cell>
+					<mat-cell *matCellDef="let adeudo">
+						<div class="example-button-row">
+							<button
+              mat-mini-fab
+              color="warning"
+              (click)="abonar($event, adeudo)"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+							<button
+              mat-mini-fab
+              color="success"
+              (click)="saldar($event, adeudo)"
+            >
+              <mat-icon>done</mat-icon>
+            </button>
+						</div>
+					</mat-cell>
+				</ng-container>
+				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+				<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+				<tr class="mat-row" *matNoDataRow>
+					<td class="mat-cell" colspan="4 ">
+						No se encuentran resultados
+					</td>
+				</tr>
+			</mat-table>
+			<mat-paginator [length]="100" [pageSize]="10"></mat-paginator>
+			<br /><br /><br />
+
+			<div class="col-lg-12 mat-elevation-z8" style="overflow-x: auto">
+			</div>
+</div>

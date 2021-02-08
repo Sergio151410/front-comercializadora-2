@@ -17,7 +17,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {FormsModule} from '@angular/forms';
 import {MatTooltipModule} from '@angular/material/tooltip';
-
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatSortModule } from "@angular/material/sort";
 
 @NgModule({
   declarations: [],
@@ -39,7 +40,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonToggleModule,
     MatCardModule,
     FormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   exports:
   [
@@ -59,7 +63,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonToggleModule,
     MatCardModule,
     FormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule,
+    MatSortModule,
+    MatProgressSpinnerModule
     
   ]
 })
